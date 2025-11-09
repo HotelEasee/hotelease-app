@@ -1,0 +1,238 @@
+.booking-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  color: #222;
+}
+
+.steps-indicator {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  color: #888;
+  position: relative;
+}
+
+.step.completed {
+  color: #4caf50;
+  border-bottom-color: #4caf50;
+}
+
+.step.current {
+  color: #007bff;
+  border-bottom-color: #007bff;
+}
+
+.booking-main {
+  display: flex;
+  gap: 40px;
+}
+
+/* Left summary panel */
+
+.selection-summary {
+  flex-basis: 40%;
+}
+
+.hotel-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.hotel-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 180px;
+}
+
+.hotel-info {
+  padding: 10px 0;
+}
+
+.hotel-info h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.hotel-location {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.hotel-amenities {
+  display: grid;
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: #777;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 3fr));
+  gap: 1rem;
+}
+
+.rating-text {
+  margin-top: 10px;
+  font-style: italic;
+  color: #228b22;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Price summary */
+
+.price-summary {
+  background: #f4f5f8;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 3px rgb(0 0 0 / 0.1);
+  font-size: 0.95rem;
+}
+
+.price-summary h4 {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.price-row.discount {
+  color: #d32f2f;
+}
+
+.price-row.total {
+  font-weight: 700;
+  background: #ccc;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.price-row.total small {
+  font-weight: normal;
+  font-size: 0.75rem;
+  color: #333;
+  display: block;
+}
+
+.booking-details-summary {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 0.95rem;
+  box-shadow: 1px 1px 5px rgb(0 0 0 / 0.1);
+}
+
+.booking-details-summary h4 {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.dates-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dates-row > div {
+  flex-basis: 48%;
+}
+
+.dates-row strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.booking-details-summary p {
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+/* Right detail form */
+
+.details-form {
+  flex-basis: 55%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.1);
+  padding: 20px 30px;
+}
+
+.details-form h3 {
+  margin-top: 0;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.details-form form label {
+  display: block;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.details-form form input,
+.details-form form select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.phone-input .phone-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.phone-wrapper select {
+  width: 100px;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.next-btn {
+  background-color: #5CC1FF;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.next-btn:hover {
+  background-color: #0056b3;
+}

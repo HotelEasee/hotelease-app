@@ -1,0 +1,271 @@
+/* Header Styles */
+.header {
+  background: #5CC1FF;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header.dark {
+  background: #1a1a1a;
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+.logo h1 {
+  color: #494545;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  text-decoration: none;
+}
+
+.logo:hover h1 {
+  color: #000000;
+}
+
+/* Search Container */
+.search-container {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+}
+
+.search-form {
+  display: flex;
+  background: #f8f9fa;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.search-form:focus-within {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #6c757d;
+}
+
+.search-btn {
+  padding: 0.75rem 1rem;
+  border: none;
+  background: #fff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background: #fff;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link:hover {
+  background: #f8f9fa;
+  color: #007bff;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f2f6fa;
+  object-fit: cover;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  display: inline-block;
+}
+
+.profile-avatar.initials {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-right: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+
+.logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.logout-btn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn:hover {
+  background: #f8f9fa;
+  color: #007bff;
+}
+
+.theme-toggle:hover {
+  background: #ffc107;
+  color: #000;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header-content {
+    gap: 1rem;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  
+  .search-container {
+    display: none;
+  }
+  
+  .search-container.active {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%); 
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .nav.active {
+    transform: translateY(0); 
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-link {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  /* Style and position the close button */
+  .close-btn {
+    /* Positioning */
+    position: absolute;
+    top: 0.5rem; /* Adjust as needed */
+    right: 0.5rem; /* Adjust as needed */
+    
+    /* Basic Styling */
+    background: none;
+    border: none;
+    font-size: 2rem; /* Make the 'X' large and easy to hit */
+    cursor: pointer;
+    color: #333;
+    z-index: 1002; /* Ensure it's above the nav's background */
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0.5rem 0;
+  }
+  
+  .logo h1 {
+    font-size: 1.2rem;
+  }
+  
+  .action-btn {
+    padding: 0.4rem;
+  }
+}
+
+@media (min-width: 769px) {
+    .close-btn {
+        display: none;
+    }
+}
+
